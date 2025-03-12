@@ -1,0 +1,32 @@
+# One-Pager: Multi-Step Form Design
+
+ Design Decisions
+
+1. Modular Approach: 
+   - Used class-based structure (`MultiStepForm`) for better code organization, scalability, and maintainability. This allows the form to be easily extended with more steps or features.
+   
+2. LocalStorage for Persistence: 
+   - Utilized `localStorage` to persist form data across page reloads, which improves user experience and prevents data loss.
+
+3. Validation: 
+   - HTML5 form validation is used for simple field validations (e.g., required fields, email, phone).
+   - Custom error messages are displayed when a field is invalid to guide the user.
+
+4. Responsive Design: 
+   - The form uses CSS Flexbox to ensure it looks good on all screen sizes, making it mobile-friendly.
+
+ Scalability and Future Enhancements
+
+1. Scalability:
+   - The current design works well for a 3-step form. If more steps are added in the future, a framework like React or Vue.js could be used to manage the state more effectively.
+   - Backend Integration: For a real-world app, the form should submit data to a server. I would use a backend server (Node.js, Express) to handle the submission process.
+
+2. Usability Enhancements:
+   - Progress Indicator: A progress bar is used, but it can be enhanced to show more specific progress, like percentage or step labels.
+   - Error Handling: Clear error messages are shown for invalid inputs, ensuring that users know exactly what needs to be corrected.
+   - Accessibility: Future improvements could include better accessibility features like ARIA labels and keyboard navigation support.
+
+3. Production Considerations:
+   - Security: Ensure that the form submission is secure, especially when handling sensitive data.
+   - Form Field Enhancement: Input fields like phone numbers or emails could be enhanced with input masking or more advanced validation logic.
+   - Data Integrity: Additional custom validations for complex fields (e.g., address) could be added to ensure data consistency.
